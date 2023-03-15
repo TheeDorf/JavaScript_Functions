@@ -89,12 +89,12 @@ function dataUsage(planLimit, day, usage) {
     if (usage>= planLimit){
         console.log(`You have used all of your data`);
     } else if (averageDailyUsage > averageDailyRemaining){
-        console.log(`You are using too much data per day`)
+        console.log(`You are using too much data per day. You can only use ${averageDailyRemaining} GB of data per day for the ${daysLeft} days. `)
     } else {
-        console.log(`You still have data left to use`)
+        console.log(`You still have data left to use. You can use ${averageDailyRemaining} GB a day and stay under your limit. `);
     }
    
 }
 
 console.log(dataUsage(100,15,56));
-console.log(dataUsage(200,20,56));
+console.log(dataUsage(100,20,5));
