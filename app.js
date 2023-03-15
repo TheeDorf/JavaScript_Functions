@@ -1,19 +1,20 @@
 console.log("Hello World!\n==========\n");
 
 // Exercise 1 Section
+
 function printOdds(count) {
-    if (count < 1){
-        console.log('Please enter a positive number.');
-        return
+    if (count < 1) {
+      console.log("Error: Count must be a positive integer.");
+      return;
     }
-}
-
-
-for (let i = 1; i <= 50; i++){
-    if (i % 2 !==0){
-        console.log(i);
-    }
-}
+    for (let i = 1; i <= count; i++) {
+        if (i % 2 !== 0) {
+          console.log(i);
+        }
+      }
+    
+  }
+printOdds(51)
 
 
 // Exercise 2 Section
@@ -41,7 +42,20 @@ function checkPoint (x,y){
    if  (x === 0 && y === 0){
     console.log(`this is the origin`)
    }
-   else if (x===0){
-    console.log(`(${x},)`)
-   }
+   else if (x === 0) {
+    console.log(`(${x}, ${y}) is on the y axis`);
+  } else if (y === 0) {
+    console.log(`(${x}, ${y}) is on the x axis`);
+  } else if (x > 0 && y > 0) {
+    console.log(`(${x}, ${y}) is in Quadrant 1`);
+  } else if (x < 0 && y > 0) {
+    console.log(`(${x}, ${y}) is in Quadrant 2`);
+  } else if (x < 0 && y < 0) {
+    console.log(`(${x}, ${y}) is in Quadrant 3`);
+  } else if (x > 0 && y < 0) {
+    console.log(`(${x}, ${y}) is in Quadrant 4`);
+  }
 }
+checkPoint(0,2)
+checkPoint(1,2)
+checkPoint(-6,18)
